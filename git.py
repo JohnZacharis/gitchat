@@ -31,7 +31,7 @@ st.header("An ACG Service to Access Deree Handbook")
 img = Image.open("deree.jpg")
 st.image(img, width=None)
 
-openai.api_key = st.secrets[key]
+openai.api_key = st.secrets.key
 
 
 if "messages" not in st.session_state.keys(): # Initialize the chat message history
