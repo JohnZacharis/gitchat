@@ -50,19 +50,19 @@ def load_data():
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
 
-#index = load_data()
+index = load_data()
 
-if not os.path.exists('datastore'):
-    index = load_data()
-    index.storage_context.persist("datastore")
+#if not os.path.exists('datastore'):
+#    index = load_data()
+#    index.storage_context.persist("datastore")
 
 
-else:
+#else:
     # Rebuild storage context
-    storage_context = StorageContext.from_defaults(persist_dir="datastore")
+#    storage_context = StorageContext.from_defaults(persist_dir="datastore")
 
     # Load index from the storage context
-    index = load_index_from_storage(storage_context)
+#    index = load_index_from_storage(storage_context)
 
 
 chat_engine = index.as_chat_engine(chat_mode="condense_question", verbose=True)
