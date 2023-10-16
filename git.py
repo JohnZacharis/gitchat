@@ -31,7 +31,12 @@ st.header("An ACG Service to Access Deree Handbook")
 img = Image.open("deree.jpg")
 st.image(img, width=None)
 
-st.sidebar.text('This is some text.')
+st.sidebar.text('
+Faculty Emails (A-I)
+Final Exams (Courses A-I)
+Rooms (DC 502, DC 503, CN 1102)
+Student Handbook (pages 12-34)
+')
 
 openai.api_key = st.secrets.key
 
