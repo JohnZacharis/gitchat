@@ -27,7 +27,7 @@ import pickle
 #st_data = st_folium(m, width=725)
 
 from PIL import Image
-st.header("An ACG Service to Access Deree Handbook")
+st.header("ACG ChatBot")
 img = Image.open("deree.jpg")
 st.image(img, width=None)
 
