@@ -36,6 +36,17 @@ st.sidebar.text("""
 > Final Exams (AF, BI, EC, & PS Courses)
 > Rooms (DC 502, DC 503, CN 1102)
 > Student Handbook (pages 12-34)
+	- Regulations, Policies and Procedures
+	- The Admissions Process
+	- The Transfer Credits Process
+	- Registration Policies
+	- Examination Regulations and Procedures
+	- Assessment, Progression and Awards
+	- Academic Offences
+	- Academic Enrichment Programs
+	- Academic Programs (Bachelors & Minors)
+
+	
 """)
 
 openai.api_key = st.secrets.key
