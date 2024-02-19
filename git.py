@@ -11,7 +11,7 @@ import pickle
 import folium
 from streamlit_folium import st_folium
 
- center on Liberty Bell, add marker
+# center on Liberty Bell, add marker
 m = folium.Map(location=[38.00313951800788, 23.82146103169662], zoom_start=16)
 folium.Marker(
     [38.0020915260597, 23.829748340668147], popup="CN Building", tooltip="CN Building"
