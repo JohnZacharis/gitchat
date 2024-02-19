@@ -8,26 +8,26 @@ from llama_index import SimpleDirectoryReader, load_index_from_storage,StorageCo
 import os
 import pickle
 
-"""
-import folium
-from streamlit_folium import st_folium
+
+#import folium
+#from streamlit_folium import st_folium
 
 
 # center on Liberty Bell, add marker
-m = folium.Map(location=[38.00313951800788, 23.82146103169662], zoom_start=16)
-folium.Marker(
-    [38.0020915260597, 23.829748340668147], popup="CN Building", tooltip="CN Building"
-).add_to(m)
-folium.Marker(
-    [38.00330802121496, 23.83168464630923], popup="DC Building", tooltip="DC Building"
-).add_to(m)
-folium.Marker(
-    [38.00264135687787, 23.829225014819208], popup="Pierce Building", tooltip="Pierce Building"
-).add_to(m)
+#m = folium.Map(location=[38.00313951800788, 23.82146103169662], zoom_start=16)
+#folium.Marker(
+#    [38.0020915260597, 23.829748340668147], popup="CN Building", tooltip="CN Building"
+#).add_to(m)
+#folium.Marker(
+#    [38.00330802121496, 23.83168464630923], popup="DC Building", tooltip="DC Building"
+#).add_to(m)
+#folium.Marker(
+#    [38.00264135687787, 23.829225014819208], popup="Pierce Building", tooltip="Pierce Building"
+#).add_to(m)
 
 # call to render Folium map in Streamlit
-st_data = st_folium(m, width=725)
-"""
+#st_data = st_folium(m, width=725)
+
 from PIL import Image
 st.header("ACG ChatBot")
 img = Image.open("deree.jpg")
