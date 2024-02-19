@@ -23,7 +23,7 @@ folium.Marker(
     [38.00264135687787, 23.829225014819208], popup="Pierce Building", tooltip="Pierce Building"
 ).add_to(m)
 
- call to render Folium map in Streamlit
+# call to render Folium map in Streamlit
 st_data = st_folium(m, width=725)
 
 from PIL import Image
