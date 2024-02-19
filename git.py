@@ -11,6 +11,7 @@ import pickle
 import folium
 from streamlit_folium import st_folium
 
+"""
 # center on Liberty Bell, add marker
 m = folium.Map(location=[38.00313951800788, 23.82146103169662], zoom_start=16)
 folium.Marker(
@@ -25,7 +26,7 @@ folium.Marker(
 
 # call to render Folium map in Streamlit
 st_data = st_folium(m, width=725)
-
+"""
 from PIL import Image
 st.header("ACG ChatBot")
 img = Image.open("deree.jpg")
