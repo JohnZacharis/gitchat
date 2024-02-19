@@ -8,10 +8,11 @@ from llama_index import SimpleDirectoryReader, load_index_from_storage,StorageCo
 import os
 import pickle
 
+"""
 import folium
 from streamlit_folium import st_folium
 
-"""
+
 # center on Liberty Bell, add marker
 m = folium.Map(location=[38.00313951800788, 23.82146103169662], zoom_start=16)
 folium.Marker(
