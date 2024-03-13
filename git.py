@@ -38,15 +38,22 @@ st.sidebar.text("""
 > Final Exams (AF, EC, FN & PS Courses)
 > Rooms (DC 502, DC 503, CN 1102)
 > Student Handbook (pages 12-34)
+	- Academic Enrichment Programs
+	- Academic Offences
+	- Academic Programs (Bachelors & Minors)
+	- Assessment, Progression and Awards
+	- Examination Regulations and Procedures
+	- Psychology Credits
+	- Registration Policies
 	- Regulations, Policies and Procedures
 	- The Admissions Process
 	- The Transfer Credits Process
-	- Registration Policies
-	- Examination Regulations and Procedures
-	- Assessment, Progression and Awards
-	- Academic Offences
-	- Academic Enrichment Programs
-	- Academic Programs (Bachelors & Minors)
+	
+	
+	
+	
+	
+	
 
 	
 """)
