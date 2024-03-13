@@ -43,6 +43,7 @@ st.sidebar.text("""
 	- Academic Programs (Bachelors & Minors)
 	- Assessment, Progression and Awards
 	- Examination Regulations and Procedures
+ 	- International Business (IB) - Required Courses
 	- Psychology Required Courses
 	- Registration Policies
 	- Regulations, Policies and Procedures
