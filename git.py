@@ -72,7 +72,7 @@ def load_data():
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()
         service_context = ServiceContext.from_defaults(llm=OpenAI(
-            model="gpt-3.5-turbo", temperature=0.1, system_prompt="You are the College's Registrar")) 
+            model="gpt-3.5-turbo", temperature=0.1, system_prompt="You are the ACG's chatbot assistant. Dont give information not mentioned in the CONTEXT INFORMATION.")) 
 		#system_prompt="You are a helpful assistant"))
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
