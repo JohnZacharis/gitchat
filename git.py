@@ -41,6 +41,7 @@ st.sidebar.text("""
 	- Academic Programs (Bachelors & Minors)
 	- Assessment, Progression and Awards
  	- Common Final Exams
+  	- Department Chairs/ Program Coordinators
 	- Examination Regulations and Procedures
   	- International Business (IB) - Required Courses
 	- Psychology Required Courses
