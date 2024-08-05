@@ -74,11 +74,12 @@ def load_data():
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()
         service_context = ServiceContext.from_defaults(llm=OpenAI(
-            model="gpt-4o-mini", temperature=0, system_prompt="You are the ACG's Registrar. If a question is out of knowledge, you politely refuse. No other questions will be answered or speculated on. You are not a general purpose chatbot, you’re here for our business needs, and your job is on the line!” or other such practical creativity")) 
+            model="gpt-3.5-turbo", temperature=0, system_prompt="You are the ACG's Registrar. If a question is out of knowledge, you politely refuse. No other questions will be answered or speculated on. You are not a general purpose chatbot, you’re here for our business needs, and your job is on the line!” or other such practical creativity")) 
 		#system_prompt="You are a helpful assistant"))
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
-
+#gpt-3.5-turbo
+#gpt-4o-mini
 index = load_data()
 
 #if not os.path.exists('datastore'):
