@@ -40,8 +40,9 @@ st.sidebar.text("""
 	- Academic Offences
 	- Academic Programs (Bachelors & Minors)
 	- Assessment, Progression and Awards
+ 	- Common Final Exams
 	- Examination Regulations and Procedures
- 	- International Business (IB) - Required Courses
+  	- International Business (IB) - Required Courses
 	- Psychology Required Courses
 	- Registration Policies
 	- Regulations, Policies and Procedures
