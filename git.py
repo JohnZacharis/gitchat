@@ -76,9 +76,14 @@ def load_data():
     with st.spinner(text="Loading and indexing the Student Handbook – hang tight! This should take 1-2 minutes."):
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()
-        service_context = ServiceContext.from_defaults(llm=OpenAI(
-            model="gpt-3.5-turbo", temperature=0.1, system_prompt="You are the ACG's Registrar. If a question is out of knowledge, you politely refuse.")) 
-		#system_prompt="You are a helpful assistant"))
+	if option= "Registrar's Office":
+	        service_context = ServiceContext.from_defaults(llm=OpenAI(
+	            model="gpt-3.5-turbo", temperature=0.1, system_prompt="You are the ACG's Registrar. If a question is out of knowledge, you politely refuse.")) 
+			#system_prompt="You are a helpful assistant"))
+	else:
+	        service_context = ServiceContext.from_defaults(llm=OpenAI(
+	            model="gpt-3.5-turbo", temperature=1, system_prompt="You are the ACG's Registrar. If a question is out of knowledge, you politely refuse.")) 
+			#system_prompt="You are a helpful assistant"))	
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
 #gpt-3.5-turbo
