@@ -5,8 +5,7 @@ import openai
 from llama_index import SimpleDirectoryReader, load_index_from_storage,StorageContext
 import os
 import pickle
-from streamlit_gsheets import GSheetsConnection
-conn = st.connection("gsheets", type=GSheetsConnection)
+
 
 #import folium
 #from streamlit_folium import st_folium
@@ -120,8 +119,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
 	
 
 
-st.caption(':blue[User data may be used for statistical purposes] :sunglasses:')
-df = conn.read()	
+	
 # Print results.
 for row in df.itertuples():
 	st.write(f"{row.message}")
