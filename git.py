@@ -5,7 +5,7 @@ import openai
 from llama_index import SimpleDirectoryReader, load_index_from_storage,StorageContext
 import os
 import pickle
-
+from streamlit_gsheets import GSheetsConnection
 
 #import folium
 #from streamlit_folium import st_folium
@@ -112,7 +112,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
             st.write(response.response)
             message = {"role": "assistant", "content": response.response}
             st.session_state.messages.append(message) # Add response to message history
-	    from streamlit_gsheets import GSheetsConnection
+	    
 
 	    # Create a connection object.
 	    conn = st.connection("gsheets", type=GSheetsConnection)
