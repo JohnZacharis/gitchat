@@ -60,7 +60,7 @@ st.sidebar.text("""
 """)
 
 openai.api_key = st.secrets.key
-option = st.selectbox(
+st.sidebar.option = st.selectbox(
     "You want to chat with:",
     ("Registrar's Office", "Student Success Center"),
 )
