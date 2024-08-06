@@ -114,14 +114,14 @@ if st.session_state.messages[-1]["role"] != "assistant":
             st.session_state.messages.append(message) # Add response to message history
 	    from streamlit_gsheets import GSheetsConnection
 
-	# Create a connection object.
-	conn = st.connection("gsheets", type=GSheetsConnection)
+	    # Create a connection object.
+	    conn = st.connection("gsheets", type=GSheetsConnection)
 	
-	df = conn.read()
+	    df = conn.read()
 	
-	# Print results.
-	for row in df.itertuples():
-	    st.write(f"{row.input}")
+            # Print results.
+	    for row in df.itertuples():
+	    	st.write(f"{row.input}")
 
 st.caption(':blue[User data may be used for statistical purposes] :sunglasses:')
 # Press the green button in the gutter to run the script.
