@@ -118,12 +118,12 @@ if st.session_state.messages[-1]["role"] != "assistant":
 	   
 	    
 	
-	    df = conn.read()	
-            # Print results.
-	    for row in df.itertuples():
-	    	st.write(f"{row.message}")
+
 
 st.caption(':blue[User data may be used for statistical purposes] :sunglasses:')
-
+df = conn.read()	
+# Print results.
+for row in df.itertuples():
+	st.write(f"{row.message}")
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
