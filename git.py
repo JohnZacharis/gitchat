@@ -113,13 +113,6 @@ if st.session_state.messages[-1]["role"] != "assistant":
             message = {"role": "assistant", "content": response.response}
             st.session_state.messages.append(message) # Add response to message history
 	    
-
-	   
-	    
-	
-
-
-	
 st.caption(':blue[User data may be used for statistical purposes] :sunglasses:')
 
 
