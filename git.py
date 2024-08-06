@@ -35,7 +35,8 @@ option = st.sidebar.selectbox(
     "You want to chat with:",
     ("Registrar's Office", "Student Success Center"),
     label_visibility="visible",
-    disabled=False
+    disabled=False,
+    inde=0
 )
 st.sidebar.text("""
 
