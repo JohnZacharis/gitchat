@@ -121,6 +121,6 @@ if st.session_state.messages[-1]["role"] != "assistant":
 
 	
 st.caption(':blue[User data may be used for statistical purposes] :sunglasses:')
-df = conn.read()
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
