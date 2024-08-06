@@ -6,6 +6,7 @@ from llama_index import SimpleDirectoryReader, load_index_from_storage,StorageCo
 import os
 import pickle
 from streamlit_gsheets import GSheetsConnection
+conn = st.connection("gsheets", type=GSheetsConnection)
 
 #import folium
 #from streamlit_folium import st_folium
@@ -114,16 +115,15 @@ if st.session_state.messages[-1]["role"] != "assistant":
             st.session_state.messages.append(message) # Add response to message history
 	    
 
-	    # Create a connection object.
-	    conn = st.connection("gsheets", type=GSheetsConnection)
+	   
+	    
 	
-	    df = conn.read()
-	
+	    df = conn.read()	
             # Print results.
 	    for row in df.itertuples():
-	    	st.write(f"{row.input}")
+	    	st.write(f"{row.message}")
 
 st.caption(':blue[User data may be used for statistical purposes] :sunglasses:')
-# Press the green button in the gutter to run the script.
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
