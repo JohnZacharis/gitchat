@@ -63,6 +63,8 @@ openai.api_key = st.secrets.key
 st.sidebar.option = st.selectbox(
     "You want to chat with:",
     ("Registrar's Office", "Student Success Center"),
+    label_visibility="visible",
+    disabled=False
 )
 
 if "messages" not in st.session_state.keys(): # Initialize the chat message history
