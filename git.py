@@ -31,7 +31,7 @@ st.header("ACG ChatBot")
 img = Image.open("deree.jpg")
 st.image(img, width=None)
 
-st.sidebar.option = st.selectbox(
+option = st.sidebar.selectbox(
     "You want to chat with:",
     ("Registrar's Office", "Student Success Center"),
     label_visibility="visible",
@@ -55,13 +55,6 @@ st.sidebar.text("""
 	- Regulations, Policies and Procedures
 	- The Admissions Process
 	- The Transfer Credits Process
-	
-	
-	
-	
-	
-	
-
 	
 """)
 
