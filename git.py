@@ -36,7 +36,7 @@ option = st.sidebar.selectbox(
     ("Registrar's Office", "Student Success Center"),
     label_visibility="visible",
     disabled=False,
-    inde=0
+    index=0
 )
 st.sidebar.text("""
 
