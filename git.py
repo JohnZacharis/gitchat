@@ -38,6 +38,9 @@ option = st.sidebar.selectbox(
     disabled=False
 )
 st.sidebar.text("""
+
+-------------------------
+
 > Faculty Emails
 > Final Exams (AF, EC, FN & PS Courses)
 > Rooms (DC 502, DC 503, CN 1102)
