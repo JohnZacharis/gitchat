@@ -31,13 +31,13 @@ st.header("ACG ChatBot")
 img = Image.open("deree.jpg")
 st.image(img, width=None)
 
-option = st.sidebar.selectbox(
-    "You want to chat with:",
-    ("Registrar's Office", "Student Success Center"),
-    label_visibility="visible",
-    disabled=False,
-    index=0
-)
+#option = st.sidebar.selectbox(
+#    "You want to chat with:",
+#    ("Registrar's Office", "Student Success Center"),
+#    label_visibility="visible",
+#    disabled=False,
+#    index=0
+#)
 st.sidebar.text("""
 
 -------------------------
