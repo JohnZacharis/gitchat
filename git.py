@@ -4,34 +4,59 @@ from llama_index.llms import OpenAI
 import openai
 from llama_index import SimpleDirectoryReader, load_index_from_storage,StorageContext
 import os
+import pickle
 
+
+#import folium
+#from streamlit_folium import st_folium
+
+
+# center on Liberty Bell, add marker
+#m = folium.Map(location=[38.00313951800788, 23.82146103169662], zoom_start=16)
+#folium.Marker(
+#    [38.0020915260597, 23.829748340668147], popup="CN Building", tooltip="CN Building"
+#).add_to(m)
+#folium.Marker(
+#    [38.00330802121496, 23.83168464630923], popup="DC Building", tooltip="DC Building"
+#).add_to(m)
+#folium.Marker(
+#    [38.00264135687787, 23.829225014819208], popup="Pierce Building", tooltip="Pierce Building"
+#).add_to(m)
+
+# call to render Folium map in Streamlit
+#st_data = st_folium(m, width=725)
 
 from PIL import Image
 st.header("ACG ChatBot")
 img = Image.open("deree.jpg")
 st.image(img, width=None)
 
-
 st.sidebar.text("""
-
 > Faculty Emails
 > Final Exams (AF, EC, FN & PS Courses)
 > Rooms (DC 502, DC 503, CN 1102)
 > Student Handbook (pages 12-34)
-	- Academic Enrichment Programs
-	- Academic Offences
-	- Academic Programs (Bachelors & Minors)
-	- Assessment, Progression and Awards
- 	- Common Final Exams
-  	- Department Chairs/ Program Coordinators
-	- Examination Regulations and Procedures
-  	- International Business (IB) - Required Courses
-	- Psychology Required Courses
-	- Registration Policies
-	- Regulations, Policies and Procedures
-	- The Admissions Process
-	- The Transfer Credits Process
-	
+      - Academic Enrichment Programs
+      - Academic Offences
+      - Academic Programs (Bachelors & Minors)
+      - Assessment, Progression and Awards
+      - Common Final Exams
+      - Department Chairs/ Program Coordinators
+      - Examination Regulations and Procedures
+      - International Business (IB) - Required Courses
+      - Psychology Required Courses
+      - Registration Policies
+      - Regulations, Policies and Procedures
+      - The Admissions Process
+      - The Transfer Credits Process
+      
+      
+      
+      
+      
+      
+
+      
 """)
 
 openai.api_key = st.secrets.key
@@ -50,12 +75,24 @@ def load_data():
         docs = reader.load_data()
         service_context = ServiceContext.from_defaults(llm=OpenAI(
             model="gpt-3.5-turbo", temperature=0.1, system_prompt="You are the ACG's Registrar. If a question is out of knowledge, you politely refuse."))
+            #system_prompt="You are a helpful assistant"))
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
 #gpt-3.5-turbo
 #gpt-4o-mini
 index = load_data()
 
+#if not os.path.exists('datastore'):
+#    index = load_data()
+#    index.storage_context.persist("datastore")
+
+
+#else:
+    # Rebuild storage context
+#    storage_context = StorageContext.from_defaults(persist_dir="datastore")
+
+    # Load index from the storage context
+#    index = load_index_from_storage(storage_context)
 
 
 chat_engine = index.as_chat_engine(chat_mode="condense_question", verbose=True)
@@ -75,8 +112,8 @@ if st.session_state.messages[-1]["role"] != "assistant":
             st.write(response.response)
             message = {"role": "assistant", "content": response.response}
             st.session_state.messages.append(message) # Add response to message history
-	    
+          
 st.caption(':blue[User data may be used for statistical purposes] :sunglasses:')
 
 
-
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
