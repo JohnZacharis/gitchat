@@ -35,7 +35,7 @@ st.sidebar.text("""
 > Faculty Emails
 > Final Exams (AF, EC, FN & PS Courses)
 > Rooms (DC 502, DC 503, CN 1102)
-> Student Handbook (pages 12-34)
+> Student Handbook (pages 22-63)
       - Academic Enrichment Programs
       - Academic Offences
       - Academic Programs (Bachelors & Minors)
